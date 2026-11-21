@@ -1,0 +1,13 @@
+{
+  "projectId": "73102808",
+  "functions": {
+    "submit-application": {
+      "hasChanged": false,
+      "hash": "55a33dc42b1841f3343c3f3094732e7e1fd2f62736d360d015d88b82a303e8a4"
+    },
+    "submit-contact": {
+      "hasChanged": false,
+      "hash": "3fd85af1f7c11295252f9e7cefb9ee5899444b0352f861e9c92d0e9b22a21daf"
+    }
+  }
+}

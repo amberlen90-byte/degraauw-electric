@@ -257,7 +257,7 @@ Deno.serve(async (req: Request) => {
         : undefined;
 
     await resend.emails.send({
-      from: 'deGraauw Electric Careers <onboarding@resend.dev>',
+      from: 'deGraauw Electric Careers <info@degraauwelectric.pro>',
       to: [RECIPIENT],
       reply_to: email,
       subject: `Job Application — ${position} — ${fullName}`,

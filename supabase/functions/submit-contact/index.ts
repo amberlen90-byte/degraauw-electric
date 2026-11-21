@@ -146,7 +146,7 @@ Deno.serve(async (req: Request) => {
       </div>`;
 
     await resend.emails.send({
-      from: 'deGraauw Electric Website <onboarding@resend.dev>',
+      from: 'deGraauw Electric Website <info@degraauwelectric.pro>',
       to: [RECIPIENT],
       reply_to: email,
       subject: `New Contact Inquiry — ${firstName} ${lastName}`,

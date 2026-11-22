@@ -4,6 +4,14 @@ import { PROJECTS } from '@/data/site';
 
 const CATEGORIES = ['Commercial', 'Industrial'] as const;
 
+// One line per project:  'Exact project name': '/projects/file-name.jpg',
+const PROJECT_IMAGES: Record<string, string> = {
+  'DR Horton Offices': '/projects/dr-horton-offices.jpg',
+  'ARCO National Construction Project': '/projects/arco-national.jpg',
+  'Nashville Commercial Build-Outs': '/projects/nashville-buildouts.jpg',
+  'Regional Manufacturing Facility Work': '/projects/regional.jpg',
+};
+
 export default function Projects() {
   return (
     <Page
@@ -37,11 +45,18 @@ export default function Projects() {
                 key={p.name}
                 className="flex flex-col rounded-lg border border-navy-100 shadow-sm transition-shadow hover:shadow-md"
               >
-                <div className="flex h-40 items-center justify-center rounded-t-lg bg-navy-950">
-                  <span className="font-display text-5xl font-bold uppercase tracking-wide text-amber-500/80">
-                    {p.name.charAt(0)}
-                  </span>
-                </div>
+                <div className="flex h-56 items-center justify-center overflow-hidden rounded-t-lg bg-navy-950">
+              {PROJECT_IMAGES[p.name] ? (
+                <img
+                  src={PROJECT_IMAGES[p.name]}
+                  alt={p.name}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <span className="font-display text-5xl font-bold uppercase tracking-wide text-amber-500/80">{p.name.charAt(0)}</span>
+              )}
+            </div>
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-navy-900">
                     {p.name}
